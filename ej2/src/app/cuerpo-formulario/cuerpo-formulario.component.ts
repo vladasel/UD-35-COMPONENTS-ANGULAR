@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cuerpo-formulario.component.css']
 })
 export class CuerpoFormularioComponent implements OnInit {
+respuesta: any;
 
   constructor() { }
 

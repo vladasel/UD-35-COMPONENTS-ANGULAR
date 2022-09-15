@@ -2,21 +2,23 @@
   <h1>Listado clientes</h1>
   <br><br>
   <table class="table">
-    <tbody>
+    <thead >
       <tr>
-
-        <td>Cliente 1</td>
-        <td>B 123</td>
-        <td>c/la la la</td>
-        <td>1</td>
+          <th>Nombre</th>
+          <th>CIF</th>
+          <th>Dirección</th>
+          <th>Grupo</th>
       </tr>
-      <tr>
+  </thead>
+    <tbody >
+      <tr *ngFor="let l of lista">
 
-        <td>Cliente 2</td>
-        <td>A 123</td>
-        <td>c/lo lo lo</td>
-        <td>2</td>
+        <td>{{l.nombre}}</td>
+        <td>{{l.cif}}</td>
+        <td>{{l.direccion}}</td>
+        <td>{{l.grupo}}</td>
       </tr>
+
     </tbody>
   </table>
 </div>
