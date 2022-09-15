@@ -1,3 +1,12 @@
-<p>
-  
-</p>
+<div class="card">
+<div class="card-title">
+<h3>Info introducida</h3>
+</div>
+<div class="card-body" *ngFor="let i of info">
+<p>Nombre: {{i.nombre}}</p>
+<p>Email: {{i.email}}</p>
+<p>Mensaje: {{i.mensaje}}</p>
+
+
+</div>
+</div>

@@ -3,29 +3,35 @@
   <br><br><br>
   <h1>Formulario de contacto</h1>
   <br><br>
-  <table>
-    <tr>
-      <th>Nombre</th>
-      <td><input type="text" placeholder="nombre i apellido"></td>
-    </tr>
-    <br>
-    <tr>
-      <th>Email</th>
-      <td><input type="email" name="" id="" placeholder="ejemplo@gmail.com"></td>
-    </tr>
-    <br>
-    <tr>
-      <th>Mensaje</th>
-      <td>       <textarea id="txa" class="form-control" placeholder="Enter your message for us here. "
-        aria-label="With textarea"></textarea></td>
-    </tr>
-    <br>
-    <tr>
-      <th>2  - 3  =  ? </th>
-      <td><input type="number" placeholder="respuesta"></td>
-    </tr>
-    <br>
-    <button class="btn btn-primary">Enviar</button>
+  <form [formGroup]="form">
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <td><input type="text" placeholder="nombre i apellido" formControlName="nombre" name="nombre"></td>
+      </tr>
+      <br>
+      <tr>
+        <th>Email</th>
+        <td><input type="email" name="email" id="" placeholder="ejemplo@gmail.com" formControlName="email" ></td>
+      </tr>
+      <br>
+      <tr>
+        <th>Mensaje</th>
+        <td>       <textarea id="txa" class="form-control" placeholder="Enter your message for us here. " formControlName="mensaje"
+          aria-label="With textarea"></textarea></td>
+      </tr>
+      <br>
+      <tr>
+        <th>2  +  3  =  ? </th>
+        <td><input type="text" placeholder="respuesta" formControlName="respuesta"></td>
+      </tr>
+      <br>
+      <button class="btn btn-primary"  (click)="guardar()">Enviar</button>
 
-  </table>
+    </table>
+
+  </form>
+
+  <br><br><br>
+  <app-validacion-form [info]="info"></app-validacion-form>
 </div>

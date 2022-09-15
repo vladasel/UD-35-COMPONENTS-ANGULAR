@@ -8,7 +8,10 @@ import { Component, OnInit,Input } from '@angular/core';
 export class ListadoClientesComponent implements OnInit {
 
   constructor() { }
+
   @Input() lista: any;
+
+
   ngOnInit(): void {
   }
 
